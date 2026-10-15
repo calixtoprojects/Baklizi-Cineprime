@@ -263,6 +263,47 @@ button,input,select{font:inherit;color:inherit}
 .care b{display:block;color:#fff;font-size:1.05rem;margin-bottom:.15rem}
 .care p{margin:0!important;font-size:.98rem!important}
 
+/* ---------- acompanhante ---------- */
+.chip-plus{background:linear-gradient(90deg,#E8307E,#FF6FA8);border-color:transparent;color:#fff}
+.chip-plus b{background:#fff;color:#C2185B;border-radius:999px;padding:0 .45rem;font-size:.8rem;font-weight:900}
+.plus-one{position:relative;display:grid;grid-template-columns:auto 1fr;gap:1.8rem;align-items:center;max-width:860px;margin:0 auto 1.2rem;padding:clamp(1.4rem,3.5vw,2.2rem);border-radius:26px;color:#fff;
+  background:linear-gradient(135deg,#E8307E 0%,#C2185B 55%,#8E1048 100%);box-shadow:0 30px 70px -30px rgba(232,48,126,.95),0 0 0 3px rgba(255,141,190,.55);animation:poGlow 2.4s ease-in-out infinite}
+@keyframes poGlow{50%{box-shadow:0 30px 70px -30px rgba(232,48,126,.95),0 0 0 7px rgba(255,141,190,.25)}}
+.po-badge{position:relative;width:118px;height:118px;border-radius:50%;background:#fff;color:#C2185B;display:grid;place-items:center}
+.po-badge svg{width:64px;height:64px}
+.po-badge b{position:absolute;right:-6px;top:-6px;background:#FFE14D;color:#170A15;font-family:var(--display);font-weight:400;font-size:1.6rem;line-height:1;padding:.35rem .55rem;border-radius:14px;transform:rotate(8deg);box-shadow:0 8px 16px -6px rgba(0,0,0,.4)}
+.po-tag{display:inline-block;background:#FFE14D;color:#170A15;font-weight:900;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:.35rem .7rem;border-radius:8px;margin-bottom:.7rem}
+.plus-one h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(1.9rem,4.2vw,3rem);line-height:.98;letter-spacing:.005em}
+.plus-one h3 span{display:block;color:#FFE14D}
+.po-steps{list-style:none;display:grid;gap:.6rem;margin:1.1rem 0 .9rem}
+.po-steps li{display:flex;gap:.8rem;align-items:flex-start;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:.75rem .9rem;font-size:1.02rem;line-height:1.35}
+.po-steps i{font-style:normal;flex:none;background:#fff;color:#C2185B;font-family:var(--display);font-size:1.1rem;width:38px;height:38px;border-radius:50%;display:grid;place-items:center}
+.po-steps b{color:#FFE14D}
+.po-note{font-size:.92rem;opacity:.95;font-weight:600}
+.mode-tabs{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1.6rem;background:#F7EEF3;padding:.45rem;border-radius:18px}
+.mode-tabs[hidden]{display:none}
+.mode-tab{border:0;background:transparent;border-radius:14px;padding:.8rem .9rem;font-weight:900;font-style:italic;text-transform:uppercase;font-size:.95rem;color:#6B4A5E;cursor:pointer;line-height:1.15;transition:background .2s,color .2s}
+.mode-tab small{display:block;font-style:normal;font-size:.66rem;letter-spacing:.16em;font-weight:800;opacity:.8;margin-bottom:.2rem}
+.mode-tab.active{background:var(--blue);color:#fff;box-shadow:0 10px 24px -12px rgba(232,48,126,.9)}
+.mode-tab[data-mode="acomp"]:not(.active){box-shadow:inset 0 0 0 2px #F3A6C8;color:#C2185B}
+.inline-plus{display:flex;gap:.8rem;align-items:center;margin-top:1.4rem;background:#FFEEF5;border:2px dashed #F3A6C8;border-radius:16px;padding:.85rem 1rem;color:#7A1247;font-weight:600;font-size:.95rem}
+.inline-plus b{flex:none;background:var(--blue);color:#fff;font-family:var(--display);font-weight:400;font-size:1.3rem;border-radius:12px;padding:.25rem .55rem}
+.acomp-head{background:linear-gradient(135deg,#FFE6F1,#FFF4F9);border:1px solid #F7C1DA;border-radius:16px;padding:1rem 1.1rem;margin-bottom:1.4rem;color:#7A1247}
+.acomp-head b{display:block;font-weight:900;font-style:italic;text-transform:uppercase;font-size:1.1rem;color:#C2185B;margin-bottom:.2rem}
+.field label .opt{text-transform:none;letter-spacing:0;font-weight:600;color:#8C7484}
+.next-plus{display:flex;gap:1.2rem;align-items:center;justify-content:space-between;flex-wrap:wrap;max-width:620px;margin:1.6rem auto 0;text-align:left;padding:1.2rem 1.3rem;border-radius:20px;background:linear-gradient(135deg,#E8307E,#C2185B);color:#fff;box-shadow:0 20px 40px -20px rgba(232,48,126,.9)}
+.next-plus b{display:block;font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.5rem;line-height:1}
+.next-plus span{display:block;font-size:.92rem;margin-top:.3rem;opacity:.95;max-width:320px}
+.next-plus .btn{background:#fff;color:#C2185B;box-shadow:none}
+.next-plus .btn:hover{background:#FFE14D;color:#170A15}
+@media (max-width:640px){
+  .plus-one{grid-template-columns:1fr;text-align:left;gap:1rem}
+  .po-badge{width:84px;height:84px}
+  .po-badge svg{width:46px;height:46px}
+  .mode-tabs{grid-template-columns:1fr}
+  .next-plus .btn{width:100%}
+}
+
 </style>
 </head>
 <body>
@@ -294,6 +335,7 @@ button,input,select{font:inherit;color:inherit}
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10h · 16h · 18h · 20h</span>
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4z"/><path d="M13 8v10" stroke-dasharray="2 2"/></svg>220 lugares por sessão</span>
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17c1-2 7-2 8 0M10 3v2h4V3"/></svg>Leve seu crachá</span>
+        <span class="chip chip-plus"><b>+1</b>Leve 1 acompanhante mulher</span>
       </div>
       <div class="hero-actions">
         <a href="#inscricao" class="btn btn-red">Garantir meu lugar
@@ -375,11 +417,11 @@ button,input,select{font:inherit;color:inherit}
         <span class="kicker">Como funciona</span>
         <h2 class="display">Simples assim</h2>
       </div>
-      <p>Cada inscrição garante 1 lugar. É uma inscrição por colaboradora.</p>
+      <p>Cada inscrição garante 1 lugar. Cada colaboradora faz a sua inscrição e pode inscrever 1 acompanhante mulher.</p>
     </div>
     <div class="steps">
       <div class="step reveal"><div class="n">01</div><h3>Escolha o horário</h3><p>10h, 16h, 18h ou 20h. Veja quantos lugares ainda restam em cada sessão.</p></div>
-      <div class="step reveal"><div class="n">02</div><h3>Faça sua inscrição</h3><p>Preencha nome, loja Baklizi e WhatsApp. Seu ingresso aparece na hora: tire um print.</p></div>
+      <div class="step reveal"><div class="n">02</div><h3>Faça sua inscrição</h3><p>Primeiro a sua: nome, loja Baklizi e WhatsApp. Depois, se quiser, inscreva sua acompanhante mulher. Os ingressos aparecem na hora: tire um print.</p></div>
       <div class="step reveal"><div class="n">03</div><h3>Leve seu crachá</h3><p>Domingo, 18 de outubro, no Cineprime. Chegue com antecedência e <strong style="color:#fff">não esqueça seu crachá Baklizi</strong>.</p></div>
     </div>
   </div>
@@ -395,9 +437,32 @@ button,input,select{font:inherit;color:inherit}
       </div>
     </div>
 
-    <p class="badge-note big reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17c1-2 7-2 8 0M10 3v2h4V3"/></svg><span><b>Importante:</b> no dia da sessão, é obrigatório levar seu crachá Baklizi.</span></p>
+    <!-- AVISO ACOMPANHANTE -->
+    <div class="plus-one" id="plusOne">
+      <div class="po-badge" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="20" r="8"/><path d="M8 50c1-10 7-16 14-16s13 6 14 16"/><circle cx="44" cy="22" r="7"/><path d="M34 37c3-3 6-4 10-4 7 0 12 6 13 15"/></svg>
+        <b>+1</b>
+      </div>
+      <div class="po-body">
+        <span class="po-tag">Atenção · Leia antes de se inscrever</span>
+        <h3>Você tem direito a levar <span>1 acompanhante mulher!</span></h3>
+        <ol class="po-steps">
+          <li><i>1º</i><span>Primeiro, faça a <b>SUA</b> inscrição aqui embaixo, escolhendo o horário.</span></li>
+          <li><i>2º</i><span>Depois, volte aqui e clique em <b>“Inscrever minha acompanhante”</b> para inscrever ela.</span></li>
+        </ol>
+        <p class="po-note">Sua acompanhante fica automaticamente na mesma sessão que você e também ocupa um lugar. Não deixe para depois!</p>
+      </div>
+    </div>
+
+    <p class="badge-note big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17c1-2 7-2 8 0M10 3v2h4V3"/></svg><span><b>Importante:</b> no dia da sessão, é obrigatório levar seu crachá Baklizi.</span></p>
 
     <div class="form-card" id="formCard">
+      <div class="mode-tabs" id="modeTabs" role="tablist" aria-label="Tipo de inscrição">
+        <button type="button" class="mode-tab active" data-mode="colab" role="tab" aria-selected="true"><small>Passo 1</small>Minha inscrição</button>
+        <button type="button" class="mode-tab" data-mode="acomp" role="tab" aria-selected="false"><small>Passo 2 · +1</small>Inscrever minha acompanhante</button>
+      </div>
+
+      <!-- PASSO 1: COLABORADORA -->
       <form id="form" novalidate>
         <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form-grid">
@@ -410,17 +475,17 @@ button,input,select{font:inherit;color:inherit}
           <div class="ftitle"><i>2</i> Seus dados</div>
           <div class="field full">
             <label for="nome">Nome completo <span class="req">*</span></label>
-            <input id="nome" name="Nome completo" type="text" autocomplete="name" required placeholder="Seu nome e sobrenome">
+            <input id="nome" name="Nome completo" type="text" autocomplete="name" placeholder="Seu nome e sobrenome">
             <div class="err">Informe seu nome completo.</div>
           </div>
           <div class="field">
             <label for="setor">Loja Baklizi <span class="req">*</span></label>
-            <input id="setor" name="Loja Baklizi" type="text" required placeholder="Em qual loja você trabalha?">
+            <input id="setor" name="Loja Baklizi" type="text" placeholder="Em qual loja você trabalha?">
             <div class="err">Informe sua loja Baklizi.</div>
           </div>
           <div class="field">
-            <label for="whats">WhatsApp <span class="req">*</span></label>
-            <input id="whats" name="WhatsApp" type="tel" inputmode="numeric" autocomplete="tel" required placeholder="(00) 00000-0000">
+            <label for="whats">Seu WhatsApp <span class="req">*</span></label>
+            <input id="whats" name="WhatsApp" type="tel" inputmode="numeric" autocomplete="tel" placeholder="(00) 00000-0000" data-phone>
             <div class="err">Informe um número com DDD.</div>
           </div>
           <div class="full">
@@ -431,17 +496,66 @@ button,input,select{font:inherit;color:inherit}
           </div>
         </div>
 
+        <p class="inline-plus"><b>+1</b><span>Vai levar acompanhante? Confirme a sua inscrição primeiro. Logo depois, aparece o botão para inscrever ela.</span></p>
+
         <div class="alert" id="alert" role="alert"></div>
 
         <div class="form-foot">
           <p>Seus dados são usados apenas para organizar as sessões do Cinemão Baklizi.</p>
           <button type="submit" class="btn btn-red" id="submitBtn">
             <span class="spinner" aria-hidden="true"></span>
-            <span class="lbl">Confirmar inscrição</span>
+            <span class="lbl">Confirmar minha inscrição</span>
             <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
       </form>
+
+      <!-- PASSO 2: ACOMPANHANTE -->
+      <form id="formAcomp" novalidate hidden>
+        <div class="acomp-head">
+          <b>Inscrição da acompanhante</b>
+          <span>Só funciona <u>depois</u> que você fez a sua inscrição. Ela fica automaticamente na mesma sessão que você.</span>
+        </div>
+        <div class="form-grid">
+          <div class="ftitle"><i>1</i> Dados da acompanhante</div>
+          <div class="field full">
+            <label for="aNome">Nome completo da acompanhante <span class="req">*</span></label>
+            <input id="aNome" name="Nome completo" type="text" placeholder="Nome e sobrenome dela">
+            <div class="err">Informe o nome completo da acompanhante.</div>
+          </div>
+          <div class="field full">
+            <label for="aWhats">WhatsApp da acompanhante <span class="opt">(opcional)</span></label>
+            <input id="aWhats" name="WhatsApp" type="tel" inputmode="numeric" placeholder="(00) 00000-0000" data-phone>
+            <div class="err">Informe um número com DDD ou deixe em branco.</div>
+          </div>
+
+          <div class="ftitle"><i>2</i> Sua inscrição</div>
+          <div class="field full">
+            <label for="cWhats">Seu WhatsApp (o mesmo da sua inscrição) <span class="req">*</span></label>
+            <input id="cWhats" name="WhatsApp da colaboradora" type="tel" inputmode="numeric" placeholder="(00) 00000-0000" data-phone>
+            <div class="err">Informe o WhatsApp que você usou na sua inscrição.</div>
+          </div>
+          <div class="full">
+            <label class="check" id="aConfLabel">
+              <input type="checkbox" id="aConf">
+              <span>Confirmo que minha acompanhante é mulher e vai comigo à sessão. <span style="color:var(--red)">*</span></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="alert" id="aAlert" role="alert"></div>
+
+        <div class="form-foot">
+          <p>Cada colaboradora pode inscrever 1 acompanhante.</p>
+          <button type="submit" class="btn btn-red" id="aSubmitBtn">
+            <span class="spinner" aria-hidden="true"></span>
+            <span class="lbl">Inscrever acompanhante</span>
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </form>
+
+      <div id="doneBox" hidden></div>
     </div>
   </div>
 </section>
@@ -589,119 +703,203 @@ button,input,select{font:inherit;color:inherit}
   setInterval(loadStatus, 30000);
   document.addEventListener('visibilitychange', function(){ if (!document.hidden) loadStatus(); });
 
-  /* ---------- formulário ---------- */
-  var form = document.getElementById('form'), btn = document.getElementById('submitBtn'), alertBox = document.getElementById('alert');
-  var whats = document.getElementById('whats');
-  whats.addEventListener('input', function(){
-    var d = whats.value.replace(/\D/g,'').slice(0,11), o = d;
-    if (d.length > 2) o = '(' + d.slice(0,2) + ') ' + d.slice(2);
-    if (d.length > 7) o = '(' + d.slice(0,2) + ') ' + d.slice(2, d.length-4) + '-' + d.slice(-4);
-    whats.value = o;
+  /* ---------- formulários ---------- */
+  var formC = document.getElementById('form'), formA = document.getElementById('formAcomp');
+  var doneBox = document.getElementById('doneBox'), tabs = document.getElementById('modeTabs');
+
+  document.querySelectorAll('[data-phone]').forEach(function(inp){
+    inp.addEventListener('input', function(){
+      var d = inp.value.replace(/\D/g,'').slice(0,11), o = d;
+      if (d.length > 2) o = '(' + d.slice(0,2) + ') ' + d.slice(2);
+      if (d.length > 7) o = '(' + d.slice(0,2) + ') ' + d.slice(2, d.length-4) + '-' + d.slice(-4);
+      inp.value = o;
+    });
   });
-  form.addEventListener('input', function(e){
-    var f = e.target.closest('.field'); if (f) f.classList.remove('invalid');
-    if (e.target.id === 'conf') document.getElementById('confLabel').classList.remove('invalid');
+  [formC, formA].forEach(function(f){
+    f.addEventListener('input', function(e){
+      var fl = e.target.closest('.field'); if (fl) fl.classList.remove('invalid');
+      var ck = e.target.closest('.check'); if (ck) ck.classList.remove('invalid');
+    });
   });
   slots.addEventListener('change', function(){ document.getElementById('slotField').classList.remove('invalid'); });
 
-  function validate(){
-    var ok = true, first = null;
-    function mark(el, field, valid){ field.classList.toggle('invalid', !valid); if(!valid){ ok = false; first = first || el; } }
-    var sel = slots.querySelector('input:checked');
-    mark(slots.querySelector('input:not(:disabled)') || slots, document.getElementById('slotField'), !!sel);
-    var nome = document.getElementById('nome');
-    mark(nome, nome.closest('.field'), nome.value.trim().split(/\s+/).length >= 2);
-    var setor = document.getElementById('setor');
-    mark(setor, setor.closest('.field'), setor.value.trim().length >= 2);
-    mark(whats, whats.closest('.field'), whats.value.replace(/\D/g,'').length >= 10);
-    var conf = document.getElementById('conf');
-    document.getElementById('confLabel').classList.toggle('invalid', !conf.checked);
-    if (!conf.checked){ ok = false; first = first || conf; }
-    if (first && first.focus) first.focus();
-    if (!sel) document.getElementById('slotField').scrollIntoView({behavior:'smooth', block:'center'});
-    return ok;
+  function setMode(m, scroll){
+    tabs.querySelectorAll('.mode-tab').forEach(function(t){
+      var on = t.dataset.mode === m; t.classList.toggle('active', on); t.setAttribute('aria-selected', on);
+    });
+    formC.hidden = m !== 'colab'; formA.hidden = m !== 'acomp'; doneBox.hidden = true; tabs.hidden = false;
+    if (scroll) document.getElementById('formCard').scrollIntoView({behavior:'smooth', block:'start'});
   }
+  tabs.addEventListener('click', function(e){ var t = e.target.closest('.mode-tab'); if (t) setMode(t.dataset.mode); });
 
-  function busy(on){
-    btn.disabled = on; btn.classList.toggle('loading', on);
-    btn.querySelector('.lbl').textContent = on ? 'Enviando…' : 'Confirmar inscrição';
-  }
-  function showAlert(msg, info){
-    alertBox.textContent = msg; alertBox.classList.toggle('info', !!info); alertBox.classList.add('show');
-    alertBox.scrollIntoView({behavior:'smooth', block:'center'});
-  }
-
+  function digits(v){ return String(v || '').replace(/\D/g,''); }
   function esc(t){ return String(t || '').replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 
-  function showTicket(nome, sessao, numero, jaInscrito){
-    var card = document.getElementById('formCard');
+  function mk(){ var o = { ok:true, first:null }; o.mark = function(el, field, valid){ field.classList.toggle('invalid', !valid); if(!valid){ o.ok = false; o.first = o.first || el; } }; return o; }
+
+  function validateC(){
+    var v = mk(), sel = slots.querySelector('input:checked');
+    v.mark(slots.querySelector('input:not(:disabled)') || slots, document.getElementById('slotField'), !!sel);
+    var nome = document.getElementById('nome'), setor = document.getElementById('setor'), w = document.getElementById('whats'), conf = document.getElementById('conf');
+    v.mark(nome, nome.closest('.field'), nome.value.trim().split(/\s+/).length >= 2);
+    v.mark(setor, setor.closest('.field'), setor.value.trim().length >= 2);
+    v.mark(w, w.closest('.field'), digits(w.value).length >= 10);
+    v.mark(conf, document.getElementById('confLabel'), conf.checked);
+    if (v.first && v.first.focus) v.first.focus();
+    if (!sel) document.getElementById('slotField').scrollIntoView({behavior:'smooth', block:'center'});
+    return v.ok;
+  }
+  function validateA(){
+    var v = mk();
+    var n = document.getElementById('aNome'), aw = document.getElementById('aWhats'), cw = document.getElementById('cWhats'), conf = document.getElementById('aConf');
+    v.mark(n, n.closest('.field'), n.value.trim().split(/\s+/).length >= 2);
+    var ad = digits(aw.value).length; v.mark(aw, aw.closest('.field'), ad === 0 || ad >= 10);
+    v.mark(cw, cw.closest('.field'), digits(cw.value).length >= 10);
+    v.mark(conf, document.getElementById('aConfLabel'), conf.checked);
+    if (v.first && v.first.focus) v.first.focus();
+    return v.ok;
+  }
+
+  function busy(btn, on, label){
+    btn.disabled = on; btn.classList.toggle('loading', on);
+    btn.querySelector('.lbl').textContent = on ? 'Enviando…' : label;
+  }
+  function showAlert(box, msg, info){
+    box.textContent = msg; box.classList.toggle('info', !!info); box.classList.add('show');
+    box.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+
+  function showDone(o){
     var bk = document.querySelector('.header .bk').src;
-    card.innerHTML =
+    var acomp = o.tipo === 'acomp';
+    var kicker = o.ja ? (acomp ? 'Sua acompanhante já está inscrita' : 'Você já está inscrita') : (acomp ? 'Acompanhante inscrita' : 'Inscrição confirmada');
+    var title = acomp ? 'Lugar da acompanhante garantido!' : 'Seu lugar está garantido!';
+    var sub = o.ja ? 'Já existe uma inscrição com estes dados. Aqui está o ingresso:' :
+              (acomp ? 'Pronto! Ela vai com você na mesma sessão. Tire um print do ingresso dela.' : 'Pronto! Tire um print do seu ingresso.');
+    var html =
       '<div class="done">' +
-        '<span class="kicker" style="color:var(--blue)">' + (jaInscrito ? 'Você já está inscrita' : 'Inscrição confirmada') + '</span>' +
-        '<h3 class="display">Seu lugar está garantido!</h3>' +
-        '<p>' + (jaInscrito ? 'Este WhatsApp já tem uma inscrição. Aqui está o seu ingresso:' : 'Pronto! Tire um print do seu ingresso e nos vemos no Cinemão Baklizi.') + '</p>' +
+        '<span class="kicker" style="color:var(--blue)">' + kicker + '</span>' +
+        '<h3 class="display">' + title + '</h3>' +
+        '<p>' + sub + '</p>' +
         '<div class="eticket">' +
           '<div class="main">' +
             '<img class="bk" src="' + bk + '" alt="Baklizi">' +
             '<div class="label">Cinemão Baklizi · Outubro Rosa</div>' +
             '<div class="movie">Minha Melhor Amiga</div>' +
-            '<div class="label">Colaboradora</div>' +
-            '<div class="who">' + esc(nome) + '</div>' +
-            '<div class="row"><div><span class="label">Data</span><b>Dom · 18/10</b></div><div><span class="label">Sessão</span><b>' + esc(sessao) + '</b></div></div>' +
+            '<div class="label">' + (acomp ? 'Acompanhante' : 'Colaboradora') + '</div>' +
+            '<div class="who">' + esc(o.nome) + '</div>' +
+            (acomp && o.colaboradora ? '<div class="label" style="margin-top:.5rem">Convidada por ' + esc(o.colaboradora) + '</div>' : '') +
+            '<div class="row"><div><span class="label">Data</span><b>Dom · 18/10</b></div><div><span class="label">Sessão</span><b>' + esc(o.sessao) + '</b></div></div>' +
           '</div>' +
-          '<div class="stub"><small>Inscrição</small><b>' + (numero ? 'Nº ' + esc(numero) : '✓') + '</b><span>Sessão ' + esc(sessao) + '</span></div>' +
-        '</div>' +
-        '<p class="badge-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17c1-2 7-2 8 0M10 3v2h4V3"/></svg><span><b>Importante:</b> no dia, leve seu crachá Baklizi.</span></p>' +
-        '<p class="tip">Chegue com antecedência. Se não puder ir, avise a organização para liberar seu lugar.</p>' +
+          '<div class="stub"><small>' + (acomp ? 'Acompanhante' : 'Inscrição') + '</small><b>' + (o.numero ? 'Nº ' + esc(o.numero) : '✓') + '</b><span>Sessão ' + esc(o.sessao) + '</span></div>' +
+        '</div>';
+    if (!acomp){
+      html +=
+        '<div class="next-plus">' +
+          '<div><b>Vai levar uma acompanhante?</b><span>Você tem direito a 1 acompanhante mulher. Inscreva ela agora: ela fica na sessão das ' + esc(o.sessao) + ' com você.</span></div>' +
+          '<button type="button" class="btn btn-red" id="goAcomp">Inscrever minha acompanhante <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>' +
+        '</div>';
+    }
+    html +=
+        '<p class="badge-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17c1-2 7-2 8 0M10 3v2h4V3"/></svg><span><b>Importante:</b> no dia, a colaboradora deve levar o crachá Baklizi.</span></p>' +
+        '<p class="tip">Chegue com antecedência. Se não puder ir, avise a organização para liberar o lugar.</p>' +
         '<button type="button" class="again" onclick="location.reload()">Fazer outra inscrição</button>' +
       '</div>';
-    card.scrollIntoView({behavior:'smooth', block:'center'});
+    doneBox.innerHTML = html;
+    formC.hidden = true; formA.hidden = true; tabs.hidden = true; doneBox.hidden = false;
+    var go = document.getElementById('goAcomp');
+    if (go) go.addEventListener('click', function(){
+      document.getElementById('cWhats').value = o.whats || '';
+      setMode('acomp', true);
+      setTimeout(function(){ document.getElementById('aNome').focus(); }, 400);
+    });
+    document.getElementById('formCard').scrollIntoView({behavior:'smooth', block:'start'});
   }
 
-  function lookup(digits){
-    return fetch(ENDPOINT + '?whats=' + encodeURIComponent(digits) + '&t=' + Date.now()).then(function(r){ return r.json(); });
-  }
+  function getJSON(url){ return fetch(url).then(function(r){ return r.json(); }); }
 
-  form.addEventListener('submit', function(e){
+  /* Passo 1: colaboradora */
+  formC.addEventListener('submit', function(e){
     e.preventDefault();
-    alertBox.classList.remove('show');
-    if (!validate()) return;
-    if (form._honey.value) return;
-    if (!configured){ showAlert('As inscrições ainda não foram abertas. Tente novamente em breve.', true); return; }
+    var box = document.getElementById('alert'), btn = document.getElementById('submitBtn'), label = 'Confirmar minha inscrição';
+    box.classList.remove('show');
+    if (!validateC()) return;
+    if (formC._honey.value) return;
+    if (!configured){ showAlert(box, 'As inscrições ainda não foram abertas. Tente novamente em breve.', true); return; }
 
-    var data = new URLSearchParams();
-    data.append('Nome completo', form.elements['Nome completo'].value.trim());
-    data.append('Loja Baklizi', form.elements['Loja Baklizi'].value.trim());
-    data.append('Setor / Loja', form.elements['Loja Baklizi'].value.trim()); // compatível com a 1ª versão do script
-    data.append('WhatsApp', form.elements['WhatsApp'].value.trim());
     var sessao = slots.querySelector('input:checked').value;
+    var nome = document.getElementById('nome').value.trim();
+    var loja = document.getElementById('setor').value.trim();
+    var w = document.getElementById('whats').value.trim();
+    var data = new URLSearchParams();
+    data.append('tipo', 'colaboradora');
+    data.append('Nome completo', nome);
+    data.append('Loja Baklizi', loja);
+    data.append('Setor / Loja', loja);
+    data.append('WhatsApp', w);
     data.append('Sessão', sessao);
-    var nome = form.elements['Nome completo'].value.trim();
-    var digits = whats.value.replace(/\D/g,'');
 
-    busy(true);
+    busy(btn, true, label);
     fetch(ENDPOINT, { method:'POST', body:data })
       .then(function(r){ return r.json(); })
       .then(function(res){
         if (res.vagas && res.vagas.sessoes){ state = res.vagas; render(); }
-        if (res.ok) return showTicket(nome, res.sessao || sessao, res.numero, false);
-        busy(false);
-        if (res.motivo === 'duplicado') return showTicket(res.nome || nome, res.sessao, res.numero, true);
+        if (res.ok) return showDone({ tipo:'colab', nome:nome, sessao:res.sessao || sessao, numero:res.numero, whats:w });
+        busy(btn, false, label);
+        if (res.motivo === 'duplicado') return showDone({ tipo:'colab', nome:res.nome || nome, sessao:res.sessao, numero:res.numero, whats:w, ja:true });
         if (res.motivo === 'esgotado'){
-          var r = slots.querySelector('input[value="' + sessao + '"]'); if (r){ r.checked = false; }
-          return showAlert('Que pena! A sessão das ' + sessao + ' acabou de esgotar. Escolha outro horário disponível.');
+          var r = slots.querySelector('input[value="' + sessao + '"]'); if (r) r.checked = false;
+          return showAlert(box, 'Que pena! A sessão das ' + sessao + ' acabou de esgotar. Escolha outro horário disponível.');
         }
-        showAlert('Confira seus dados e tente novamente.');
+        showAlert(box, 'Confira seus dados e tente novamente.');
       })
       .catch(function(){
-        // Se a resposta não pôde ser lida, confere se a inscrição foi registrada
-        lookup(digits).then(function(r){
-          if (r && r.inscrito) return showTicket(r.nome || nome, r.sessao, r.numero, false);
+        getJSON(ENDPOINT + '?whats=' + digits(w) + '&t=' + Date.now()).then(function(r){
+          if (r && r.inscrito) return showDone({ tipo:'colab', nome:r.nome || nome, sessao:r.sessao, numero:r.numero, whats:w });
           throw 0;
         }).catch(function(){
-          busy(false);
-          showAlert('Não foi possível enviar sua inscrição. Verifique sua internet e tente novamente.');
+          busy(btn, false, label);
+          showAlert(box, 'Não foi possível enviar sua inscrição. Verifique sua internet e tente novamente.');
+        });
+      });
+  });
+
+  /* Passo 2: acompanhante */
+  formA.addEventListener('submit', function(e){
+    e.preventDefault();
+    var box = document.getElementById('aAlert'), btn = document.getElementById('aSubmitBtn'), label = 'Inscrever acompanhante';
+    box.classList.remove('show');
+    if (!validateA()) return;
+    if (!configured){ showAlert(box, 'As inscrições ainda não foram abertas. Tente novamente em breve.', true); return; }
+    if (state && !(state.versao >= 2)){ showAlert(box, 'A inscrição de acompanhantes será liberada em instantes. Tente novamente mais tarde.', true); return; }
+
+    var nome = document.getElementById('aNome').value.trim();
+    var cw = document.getElementById('cWhats').value.trim();
+    var data = new URLSearchParams();
+    data.append('tipo', 'acompanhante');
+    data.append('Nome completo', nome);
+    data.append('WhatsApp', document.getElementById('aWhats').value.trim());
+    data.append('WhatsApp da colaboradora', cw);
+
+    busy(btn, true, label);
+    fetch(ENDPOINT, { method:'POST', body:data })
+      .then(function(r){ return r.json(); })
+      .then(function(res){
+        if (res.vagas && res.vagas.sessoes){ state = res.vagas; render(); }
+        if (res.ok) return showDone({ tipo:'acomp', nome:nome, sessao:res.sessao, numero:res.numero, colaboradora:res.colaboradora });
+        busy(btn, false, label);
+        if (res.motivo === 'acompanhante_duplicada') return showDone({ tipo:'acomp', nome:res.nome, sessao:res.sessao, numero:res.numero, colaboradora:res.colaboradora, ja:true });
+        if (res.motivo === 'sem_colaboradora') return showAlert(box, 'Não encontramos a sua inscrição com esse WhatsApp. Primeiro faça a SUA inscrição (Passo 1) e depois use o mesmo número aqui.');
+        if (res.motivo === 'esgotado') return showAlert(box, 'A sessão das ' + (res.sessao || '') + ' lotou e não há mais lugar para a acompanhante. Fale com a organização.');
+        showAlert(box, 'Confira os dados e tente novamente.');
+      })
+      .catch(function(){
+        getJSON(ENDPOINT + '?acomp=' + digits(cw) + '&t=' + Date.now()).then(function(r){
+          if (r && r.inscrito) return showDone({ tipo:'acomp', nome:r.nome || nome, sessao:r.sessao, numero:r.numero, colaboradora:r.colaboradora });
+          throw 0;
+        }).catch(function(){
+          busy(btn, false, label);
+          showAlert(box, 'Não foi possível enviar a inscrição. Verifique sua internet e tente novamente.');
         });
       });
   });
